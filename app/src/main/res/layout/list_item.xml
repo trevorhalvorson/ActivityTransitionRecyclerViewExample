@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_height="wrap_content"
              android:background="?android:attr/selectableItemBackground"
              android:clickable="true"
-             android:focusable="true">
+             android:focusable="true"
+             android:minHeight="?android:attr/listPreferredItemHeight">
 
     <ImageView
         android:id="@+id/list_item_poster_image_view"
@@ -12,4 +14,16 @@
         android:layout_height="100dp"
         android:layout_gravity="start"
         android:transitionName="@string/transition_image"/>
+
+    <TextView
+        android:id="@+id/list_item_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:transitionName="@string/transition_title"
+        tools:text="Title"/>
 </FrameLayout>

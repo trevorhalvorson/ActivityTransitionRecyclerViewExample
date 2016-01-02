@@ -54,10 +54,11 @@ public class MainActivity extends AppCompatActivity {
                         detailIntent.putExtra(DetailActivity.EXTRA_PARAM, mProductions.get(position));
 
                         Pair imagePair = new Pair<>(view.findViewById(R.id.list_item_poster_image_view), DetailActivity.IMAGE_TRANSITION_NAME);
+                        Pair titlePair = new Pair<>(view.findViewById(R.id.list_item_title_text_view), DetailActivity.TITLE_TRANSITION_NAME);
 
                         ActivityOptionsCompat transitionActivityOptions =
                                 ActivityOptionsCompat.makeSceneTransitionAnimation(
-                                        MainActivity.this, imagePair);
+                                        MainActivity.this, imagePair, titlePair);
 
                         ActivityCompat.startActivity(MainActivity.this,
                                 detailIntent, transitionActivityOptions.toBundle());

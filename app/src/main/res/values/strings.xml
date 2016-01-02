@@ -4,7 +4,7 @@
     <string name="search_title">Search</string>
     <string name="search_view_hint">Actor name</string>
     <string name="github_link">View on GitHub</string>
-    <string name="transition_view">transition_view</string>
     <string name="transition_image">transition_image</string>
+    <string name="transition_title">transition_title</string>
     <string name="production_poster">Production Poster</string>
 </resources>

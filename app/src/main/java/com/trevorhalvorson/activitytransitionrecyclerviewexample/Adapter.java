@@ -2,11 +2,11 @@ package com.trevorhalvorson.activitytransitionrecyclerviewexample;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -46,10 +46,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     public class Holder extends RecyclerView.ViewHolder {
         private Production mProduction;
         private ImageView mPosterImageView;
+        private TextView mTitleTextView;
 
         public Holder(View itemView) {
             super(itemView);
             mPosterImageView = (ImageView) itemView.findViewById(R.id.list_item_poster_image_view);
+            mTitleTextView = (TextView) itemView.findViewById(R.id.list_item_title_text_view);
         }
 
         private void bindProduction(Production production) {
@@ -57,6 +59,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
             Glide.with(mContext)
                     .load(mProduction.getPoster())
                     .into(mPosterImageView);
+            mTitleTextView.setText(mProduction.getShowTitle());
         }
     }
 
