@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context="com.trevorhalvorson.activitytransitionrecyclerviewexample.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -25,8 +24,8 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/production_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="bottom"
+        android:layout_height="match_parent"
         android:background="@android:color/white"
-        android:elevation="5dp"/>
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 </android.support.design.widget.CoordinatorLayout>

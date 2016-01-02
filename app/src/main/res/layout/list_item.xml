@@ -10,6 +10,6 @@
         android:id="@+id/list_item_poster_image_view"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
         android:transitionName="@string/transition_image"/>
 </FrameLayout>

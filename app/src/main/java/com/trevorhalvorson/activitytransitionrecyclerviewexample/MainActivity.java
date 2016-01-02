@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new Adapter(mProductions, this);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.production_recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.addOnItemTouchListener(
                 new RecyclerViewItemClickListener(this, new RecyclerViewItemClickListener.OnItemClickListener() {
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 mProgressDialog.dismiss();
 
-                // Alert the user if no results are returned from the service
+                // Alert user if no results are returned from the service
                 if (mProductions == null) {
                     Snackbar.make(mRecyclerView, "No results found.", Snackbar.LENGTH_LONG).show();
                 }
